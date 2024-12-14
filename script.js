@@ -6,9 +6,10 @@ const camera = new THREE.PerspectiveCamera(
   1000
 ) 
 const renderer = new THREE.WebGLRenderer() 
-
 renderer.setSize(window.innerWidth, window.innerHeight) 
 document.body.appendChild(renderer.domElement)
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); scene.add(ambientLight);
 
 const planetGeometry = new THREE.SphereGeometry(1, 32, 32) 
 const planetMaterial = new THREE.MeshBasicMaterial({ color: 0x0077cc }) 
