@@ -20,7 +20,7 @@ const planet = new THREE.Mesh(planetGeometry, planetMaterial)
 scene.add(planet)
 
 const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32) 
-const moonMaterial = new THREE.MeshBasicMaterial({ color: 0x333333 })
+const moonMaterial = new THREE.MeshBasicMaterial({ color: 0x5c2707 })
 
 const moon1 = new THREE.Mesh(moonGeometry, moonMaterial)
 moon1.position.set(2, 0, 0) 
@@ -54,7 +54,6 @@ function createStarField() {
   scene.add(starField) 
 }
  
-
 createStarField()
 
 camera.position.z = 5
