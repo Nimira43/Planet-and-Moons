@@ -34,7 +34,18 @@ camera.position.z = 5
 
 function animate() { 
   requestAnimationFrame(animate)
+  
   planet.rotation.y += 0.09
+  
+  moon1.position.x = Math.cos(Date.now() * 0.001) * 2 
+  moon1.position.z = Math.sin(Date.now() * 0.001) * 2 
+  
+  moon2.position.y = Math.cos(Date.now() * 0.001) * 2 
+  moon2.position.z = Math.sin(Date.now() * 0.001) * 2 
+  
+  moon3.position.x = Math.cos(Date.now() * 0.001) * 2 
+  moon3.position.y = Math.sin(Date.now() * 0.001) * 2
+  
   renderer.render(scene, camera)
 }
 animate()
