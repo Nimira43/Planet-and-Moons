@@ -16,7 +16,19 @@ const planet = new THREE.Mesh(planetGeometry, planetMaterial)
 scene.add(planet)
 
 const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32) 
-const moonMaterial = new THREE.MeshBasicMaterial({ color: 0xaaaaaa })
+const moonMaterial = new THREE.MeshBasicMaterial({ color: 0x333333 })
+
+const moon1 = new THREE.Mesh(moonGeometry, moonMaterial)
+moon1.position.set(2, 0, 0) 
+scene.add(moon1)
+
+const moon2 = new THREE.Mesh(moonGeometry, moonMaterial) 
+moon2.position.set(0, 2, 0) 
+scene.add(moon2) 
+
+const moon3 = new THREE.Mesh(moonGeometry, moonMaterial) 
+moon3.position.set(0, 0, 2) 
+scene.add(moon3);
 
 camera.position.z = 5
 
