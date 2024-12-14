@@ -15,10 +15,14 @@ const planetMaterial = new THREE.MeshBasicMaterial({ color: 0x0077cc })
 const planet = new THREE.Mesh(planetGeometry, planetMaterial) 
 scene.add(planet)
 
+const moonGeometry = new THREE.SphereGeometry(0.2, 32, 32) 
+const moonMaterial = new THREE.MeshBasicMaterial({ color: 0xaaaaaa })
+
 camera.position.z = 5
 
 function animate() { 
   requestAnimationFrame(animate)
+  planet.rotation.y += 0.09
   renderer.render(scene, camera)
 }
 animate()
